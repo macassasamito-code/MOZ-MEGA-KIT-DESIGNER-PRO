@@ -66,6 +66,8 @@ Todas as constantes comerciais estão centralizadas em `src/config/product.ts`:
 │   └── main.tsx
 ├── .env.example
 ├── .gitignore
+├── .node-version
+├── .nvmrc
 ├── index.html
 ├── metadata.json
 ├── package.json
@@ -79,8 +81,8 @@ Todas as constantes comerciais estão centralizadas em `src/config/product.ts`:
 
 ## Pré-requisitos
 
-- **Node.js** `>= 18.0.0` (recomendado Node.js 20 LTS ou 22 LTS)
-- **npm** `>= 9.0.0`
+- **Node.js** `>= 22.12.0` (ou `>= 20.19.0`; obrigatório para `vite@8` / `rolldown`)
+- **npm** `>= 10.0.0`
 
 ---
 
@@ -146,7 +148,7 @@ git push -u origin main
    - **Comando de instalação**: `npm install`
    - **Comando de build**: `npm run build`
    - **Directório de publicação (Output Directory)**: `dist`
-   - **Versão do Node.js**: `20` (ou `22`)
+   - **Versão do Node.js**: `22` (obrigatório usar Node `22.12+` ou `20.19+`; o Node `18` falha no bundler Rolldown do Vite 8)
 4. Guarda e inicia o deploy. A cada `git push` na branch `main`, a Hostinger compila e actualiza o site automaticamente.
 
 ### Opção 2 — Upload Manual da Pasta `dist` (Shared Hosting / Gestor de Ficheiros)
